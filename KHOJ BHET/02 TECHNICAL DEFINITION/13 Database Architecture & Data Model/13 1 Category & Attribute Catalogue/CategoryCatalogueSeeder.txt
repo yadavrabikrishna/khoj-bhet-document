@@ -1,0 +1,2045 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+
+class CategoryCatalogueSeeder extends Seeder
+{
+    public function run(): void
+    {
+        DB::transaction(function () {
+            $categories = [
+    {
+        "cat": "CAT-001",
+        "name": "Property",
+        "subs": [
+            {
+                "id": "CAT-001-01",
+                "name": "Room",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-001-02",
+                "name": "Flat",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-001-03",
+                "name": "House",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-001-04",
+                "name": "Apartment",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-001-05",
+                "name": "Building",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-001-06",
+                "name": "Land",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-001-07",
+                "name": "Office",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-001-08",
+                "name": "Shop",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-001-09",
+                "name": "Warehouse",
+                "scope": "Primary catalogue scope."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-002",
+        "name": "Mobile & Electronics",
+        "subs": [
+            {
+                "id": "CAT-002-01",
+                "name": "Mobile Phone",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-002-02",
+                "name": "Tablet",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-002-03",
+                "name": "Laptop",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-002-04",
+                "name": "Desktop Computer",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-002-05",
+                "name": "Television",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-002-06",
+                "name": "Camera",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-002-07",
+                "name": "Audio Equipment",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-002-08",
+                "name": "Gaming",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-002-09",
+                "name": "Computer Accessories",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-002-10",
+                "name": "Mobile Accessories",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-002-11",
+                "name": "Other Electronics",
+                "scope": "Primary catalogue scope."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-003",
+        "name": "Furniture & Home",
+        "subs": [
+            {
+                "id": "CAT-003-01",
+                "name": "Sofa & Couch",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-003-02",
+                "name": "Bed",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-003-03",
+                "name": "Mattress",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-003-04",
+                "name": "Table",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-003-05",
+                "name": "Chair",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-003-06",
+                "name": "Dining Set",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-003-07",
+                "name": "Wardrobe & Cabinet",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-003-08",
+                "name": "Desk & Office Furniture",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-003-09",
+                "name": "Shelf & Storage",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-003-10",
+                "name": "Kitchen Furniture",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-003-11",
+                "name": "Home Decor",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-003-12",
+                "name": "Other Furniture & Home",
+                "scope": "Primary catalogue scope."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-004",
+        "name": "Vehicles",
+        "subs": [
+            {
+                "id": "CAT-004-01",
+                "name": "Car",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-02",
+                "name": "SUV / Jeep",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-03",
+                "name": "Van / Minivan",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-04",
+                "name": "Pickup",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-05",
+                "name": "Truck",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-06",
+                "name": "Bus / Microbus",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-07",
+                "name": "Motorcycle",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-08",
+                "name": "Scooter",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-09",
+                "name": "Electric Two-Wheeler",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-10",
+                "name": "Electric Car",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-11",
+                "name": "Tractor & Agricultural Vehicle",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-12",
+                "name": "Bicycle",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-13",
+                "name": "Auto Rickshaw / Three-Wheeler",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-14",
+                "name": "Vehicle Parts & Accessories",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-004-15",
+                "name": "Other Vehicles",
+                "scope": "Primary catalogue scope."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-005",
+        "name": "Fashion & Clothing",
+        "subs": [
+            {
+                "id": "CAT-005-01",
+                "name": "Men's Clothing",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-02",
+                "name": "Women's Clothing",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-03",
+                "name": "Kids' Clothing",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-04",
+                "name": "Traditional & Ethnic Wear",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-05",
+                "name": "Footwear",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-06",
+                "name": "Fashion Bags & Wallets",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-07",
+                "name": "Watches",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-08",
+                "name": "Jewelry & Accessories",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-09",
+                "name": "Wedding & Occasion Wear",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-10",
+                "name": "Sportswear & Activewear",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-11",
+                "name": "Baby & Infant Clothing",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-12",
+                "name": "Uniforms & Workwear",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-13",
+                "name": "Fashion Accessories",
+                "scope": "Primary catalogue scope."
+            },
+            {
+                "id": "CAT-005-14",
+                "name": "Other Fashion & Clothing",
+                "scope": "Primary catalogue scope."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-006",
+        "name": "Home Appliances & Kitchen",
+        "subs": [
+            {
+                "id": "CAT-006-01",
+                "name": "Refrigerator & Freezer",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-006-02",
+                "name": "Washing Machine",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-006-03",
+                "name": "Air Conditioner",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-006-04",
+                "name": "Microwave & Oven",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-006-05",
+                "name": "Rice Cooker & Electric Cooker",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-006-06",
+                "name": "Water Heater / Geyser",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-006-07",
+                "name": "Water Purifier & Filter",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-006-08",
+                "name": "Kitchen Appliances",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-006-09",
+                "name": "Vacuum Cleaner",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-006-10",
+                "name": "Fan & Air Circulation",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-006-11",
+                "name": "Small Home Appliances",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-006-12",
+                "name": "Solar / Inverter Appliances",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-006-13",
+                "name": "Other Home Appliances",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-007",
+        "name": "Sports, Fitness & Outdoor",
+        "subs": [
+            {
+                "id": "CAT-007-01",
+                "name": "Fitness Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-02",
+                "name": "Gym Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-03",
+                "name": "Yoga & Pilates",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-04",
+                "name": "Cricket",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-05",
+                "name": "Football",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-06",
+                "name": "Basketball",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-07",
+                "name": "Badminton & Tennis",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-08",
+                "name": "Table Tennis",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-09",
+                "name": "Cycling Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-10",
+                "name": "Camping & Hiking",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-11",
+                "name": "Fishing",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-12",
+                "name": "Swimming & Water Sports",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-13",
+                "name": "Martial Arts & Combat Sports",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-14",
+                "name": "Sports Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-15",
+                "name": "Outdoor Recreation",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-007-16",
+                "name": "Other Sports & Outdoor",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-008",
+        "name": "Jobs & Employment",
+        "subs": [
+            {
+                "id": "CAT-008-01",
+                "name": "Full-Time Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-02",
+                "name": "Part-Time Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-03",
+                "name": "Contract / Temporary Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-04",
+                "name": "Freelance Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-05",
+                "name": "Internship / Trainee",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-06",
+                "name": "Work From Home / Remote",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-07",
+                "name": "Government / Public Sector Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-08",
+                "name": "Teaching & Education Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-09",
+                "name": "Healthcare Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-10",
+                "name": "IT & Technology Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-11",
+                "name": "Sales & Marketing Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-12",
+                "name": "Hospitality & Tourism Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-13",
+                "name": "Construction & Skilled Trades",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-14",
+                "name": "Driver & Delivery Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-15",
+                "name": "Domestic & Household Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-008-16",
+                "name": "Other Jobs",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-009",
+        "name": "Services",
+        "subs": [
+            {
+                "id": "CAT-009-01",
+                "name": "Home & Domestic Services",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-02",
+                "name": "Repair & Maintenance",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-03",
+                "name": "Construction & Renovation Services",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-04",
+                "name": "Automotive Services",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-05",
+                "name": "IT & Digital Services",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-06",
+                "name": "Business & Professional Services",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-07",
+                "name": "Education & Training",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-08",
+                "name": "Health & Wellness Services",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-09",
+                "name": "Beauty & Personal Care",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-10",
+                "name": "Photography & Videography",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-11",
+                "name": "Events & Entertainment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-12",
+                "name": "Travel & Tourism Services",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-13",
+                "name": "Delivery & Moving Services",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-14",
+                "name": "Financial & Legal Services",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-15",
+                "name": "Agricultural Services",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-009-16",
+                "name": "Other Services",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-010",
+        "name": "Business, Office & Commercial Equipment",
+        "subs": [
+            {
+                "id": "CAT-010-01",
+                "name": "Computers & Office Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-02",
+                "name": "Printers, Scanners & Copiers",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-03",
+                "name": "Networking & Communication Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-04",
+                "name": "POS & Billing Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-05",
+                "name": "Security & Surveillance Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-06",
+                "name": "Commercial Kitchen Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-07",
+                "name": "Restaurant & Hospitality Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-08",
+                "name": "Tools & Workshop Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-09",
+                "name": "Medical & Laboratory Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-10",
+                "name": "Shop & Display Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-11",
+                "name": "Packaging & Printing Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-12",
+                "name": "Office Furniture & Fixtures",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-13",
+                "name": "Solar, Power & Electrical Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-010-14",
+                "name": "Other Commercial Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-011",
+        "name": "Baby, Kids & Toys",
+        "subs": [
+            {
+                "id": "CAT-011-01",
+                "name": "Baby Clothing & Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-02",
+                "name": "Baby Gear & Carriers",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-03",
+                "name": "Strollers & Prams",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-04",
+                "name": "Baby Furniture",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-05",
+                "name": "Feeding & Nursing",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-06",
+                "name": "Diapering & Baby Care",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-07",
+                "name": "Toys",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-08",
+                "name": "Educational Toys & Learning",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-09",
+                "name": "Outdoor & Ride-On Toys",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-10",
+                "name": "Video Games & Kids Electronics",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-11",
+                "name": "Kids Books & Educational Materials",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-12",
+                "name": "Party & Kids Event Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-13",
+                "name": "Safety & Childproofing",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-14",
+                "name": "Baby Health & Wellness Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-15",
+                "name": "Kids Sports & Activity Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-011-16",
+                "name": "Other Baby, Kids & Toys",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-012",
+        "name": "Books, Media & Collectibles",
+        "subs": [
+            {
+                "id": "CAT-012-01",
+                "name": "Books & Novels",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-02",
+                "name": "Academic & Educational Books",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-03",
+                "name": "Religious & Spiritual Books",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-04",
+                "name": "Magazines, Newspapers & Periodicals",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-05",
+                "name": "Comics & Graphic Novels",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-06",
+                "name": "Music & Audio Media",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-07",
+                "name": "Movies & Video Media",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-08",
+                "name": "Collectibles",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-09",
+                "name": "Antiques & Vintage Items",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-10",
+                "name": "Coins & Currency Collectibles",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-11",
+                "name": "Stamps & Postal Collectibles",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-12",
+                "name": "Art, Prints & Posters",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-13",
+                "name": "Trading Cards & Memorabilia",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-14",
+                "name": "Musical Instruments & Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-15",
+                "name": "Hobby & Craft Collections",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-012-16",
+                "name": "Other Books, Media & Collectibles",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-013",
+        "name": "Food, Agriculture Products & Livestock",
+        "subs": [
+            {
+                "id": "CAT-013-01",
+                "name": "Grains & Cereals",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-02",
+                "name": "Pulses & Legumes",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-03",
+                "name": "Fruits",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-04",
+                "name": "Vegetables",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-05",
+                "name": "Spices & Herbs",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-06",
+                "name": "Dairy & Dairy Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-07",
+                "name": "Meat & Poultry",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-08",
+                "name": "Fish & Seafood",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-09",
+                "name": "Eggs & Hatchery Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-10",
+                "name": "Seeds & Planting Materials",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-11",
+                "name": "Animal Feed & Fodder",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-12",
+                "name": "Nursery Plants & Saplings",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-13",
+                "name": "Livestock & Poultry",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-14",
+                "name": "Processed & Packaged Food",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-15",
+                "name": "Organic & Specialty Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-013-16",
+                "name": "Other Food & Agricultural Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-014",
+        "name": "Health, Beauty & Personal Care Products",
+        "subs": [
+            {
+                "id": "CAT-014-01",
+                "name": "Personal Care & Hygiene",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-02",
+                "name": "Skin Care",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-03",
+                "name": "Hair Care",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-04",
+                "name": "Makeup & Cosmetics",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-05",
+                "name": "Fragrances & Perfumes",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-06",
+                "name": "Shaving & Grooming",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-07",
+                "name": "Dental & Oral Care",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-08",
+                "name": "Baby Personal Care",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-09",
+                "name": "Fitness & Wellness Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-10",
+                "name": "Massage & Relaxation Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-11",
+                "name": "Vision & Eye Care Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-12",
+                "name": "Hearing & Assistive Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-13",
+                "name": "Beauty Equipment & Salon Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-014-14",
+                "name": "Other Health, Beauty & Personal Care",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-015",
+        "name": "Home & Garden",
+        "subs": [
+            {
+                "id": "CAT-015-01",
+                "name": "Home Décor & Decorative Items",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-02",
+                "name": "Lighting & Lamps",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-03",
+                "name": "Kitchenware & Dining",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-04",
+                "name": "Bedding & Linens",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-05",
+                "name": "Bathroom Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-06",
+                "name": "Storage & Organization",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-07",
+                "name": "Cleaning & Household Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-08",
+                "name": "Curtains, Blinds & Window Coverings",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-09",
+                "name": "Carpets, Rugs & Mats",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-10",
+                "name": "Garden & Gardening Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-11",
+                "name": "Plants, Pots & Planters",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-12",
+                "name": "Outdoor Furniture & Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-13",
+                "name": "Home Improvement & Building Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-14",
+                "name": "Hand Tools & Household Tools",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-015-15",
+                "name": "Other Home & Garden",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-016",
+        "name": "Pet Supplies & Animals",
+        "subs": [
+            {
+                "id": "CAT-016-01",
+                "name": "Dog Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-02",
+                "name": "Cat Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-03",
+                "name": "Bird Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-04",
+                "name": "Fish & Aquarium Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-05",
+                "name": "Small Animal Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-06",
+                "name": "Reptile & Exotic Pet Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-07",
+                "name": "Pet Food & Treats",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-08",
+                "name": "Pet Grooming & Hygiene Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-09",
+                "name": "Pet Health & Wellness Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-10",
+                "name": "Pet Beds, Cages & Housing",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-11",
+                "name": "Pet Toys & Enrichment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-12",
+                "name": "Pet Travel & Safety",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-13",
+                "name": "Aquarium & Aquatic Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-14",
+                "name": "Pets for Sale / Adoption",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-15",
+                "name": "Pet Accessories & Apparel",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-016-16",
+                "name": "Other Pet Supplies & Animals",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-017",
+        "name": "Travel, Luggage & Accessories",
+        "subs": [
+            {
+                "id": "CAT-017-01",
+                "name": "Luggage & Suitcases",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-02",
+                "name": "Backpacks & Travel Bags",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-03",
+                "name": "Travel Organizers & Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-04",
+                "name": "Travel Clothing & Footwear",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-05",
+                "name": "Camping & Travel Gear",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-06",
+                "name": "Travel Electronics & Gadgets",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-07",
+                "name": "Travel Safety & Security",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-08",
+                "name": "Passport & Document Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-09",
+                "name": "Neck Pillows & Travel Comfort",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-10",
+                "name": "Travel Toiletry & Personal Care Kits",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-11",
+                "name": "Car Travel Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-12",
+                "name": "Motorcycle Travel Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-13",
+                "name": "Outdoor & Adventure Travel Gear",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-14",
+                "name": "Travel Souvenirs & Memorabilia",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-15",
+                "name": "Business Travel Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-017-16",
+                "name": "Other Travel Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-018",
+        "name": "Construction, Tools & Building Materials",
+        "subs": [
+            {
+                "id": "CAT-018-01",
+                "name": "Cement, Concrete & Aggregates",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-02",
+                "name": "Bricks, Blocks & Pavers",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-03",
+                "name": "Steel, Metal & Structural Materials",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-04",
+                "name": "Wood, Timber & Boards",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-05",
+                "name": "Roofing & Waterproofing Materials",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-06",
+                "name": "Doors, Windows & Frames",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-07",
+                "name": "Flooring & Tiles",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-08",
+                "name": "Paint, Wall Finishes & Coatings",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-09",
+                "name": "Plumbing & Sanitary Materials",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-10",
+                "name": "Electrical & Wiring Materials",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-11",
+                "name": "Hardware, Fasteners & Fittings",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-12",
+                "name": "Hand Tools",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-13",
+                "name": "Power Tools",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-14",
+                "name": "Safety Equipment & Workwear",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-15",
+                "name": "Construction Equipment & Site Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-018-16",
+                "name": "Other Construction & Building Materials",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-019",
+        "name": "Industrial, Machinery & Heavy Equipment",
+        "subs": [
+            {
+                "id": "CAT-019-01",
+                "name": "Excavators & Earthmoving Machinery",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-02",
+                "name": "Loaders, Backhoes & Skid Steers",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-03",
+                "name": "Cranes & Lifting Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-04",
+                "name": "Forklifts & Material Handling",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-05",
+                "name": "Generators & Power Generation",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-06",
+                "name": "Compressors & Air Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-07",
+                "name": "Welding & Fabrication Machinery",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-08",
+                "name": "Manufacturing & Production Machinery",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-09",
+                "name": "Food Processing Machinery",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-10",
+                "name": "Packaging & Processing Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-11",
+                "name": "Mining & Quarry Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-12",
+                "name": "Concrete & Construction Machinery",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-13",
+                "name": "Agricultural & Forestry Machinery",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-14",
+                "name": "Industrial Pumps & Fluid Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-15",
+                "name": "Industrial Electrical & Power Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-019-16",
+                "name": "Other Industrial & Heavy Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-020",
+        "name": "Weddings, Events & Party Supplies",
+        "subs": [
+            {
+                "id": "CAT-020-01",
+                "name": "Wedding Decorations & Backdrops",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-02",
+                "name": "Party Decorations",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-03",
+                "name": "Flowers, Artificial Flowers & Floral Décor",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-04",
+                "name": "Lighting & Decorative Lighting",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-05",
+                "name": "Tables, Chairs & Event Furniture",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-06",
+                "name": "Tents, Canopies & Temporary Structures",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-07",
+                "name": "Wedding Accessories & Ceremony Items",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-08",
+                "name": "Tableware & Serving Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-09",
+                "name": "Party Supplies & Disposable Items",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-10",
+                "name": "Balloons & Balloon Decoration Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-11",
+                "name": "Cake, Baking & Dessert Decoration Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-12",
+                "name": "Invitation, Printing & Stationery Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-13",
+                "name": "Gifts, Favors & Return-Gift Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-14",
+                "name": "Kids & Theme Party Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-15",
+                "name": "Event Audio, Stage & Production Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-020-16",
+                "name": "Other Wedding, Event & Party Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-021",
+        "name": "Office, School & Stationery Supplies",
+        "subs": [
+            {
+                "id": "CAT-021-01",
+                "name": "Writing Instruments",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-02",
+                "name": "Paper & Notebooks",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-03",
+                "name": "Files, Folders & Document Storage",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-04",
+                "name": "Office Desk Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-05",
+                "name": "School Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-06",
+                "name": "Art & Drawing School Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-07",
+                "name": "Calculators & Basic Learning Devices",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-08",
+                "name": "Labels, Stickers & Identification Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-09",
+                "name": "Envelopes, Packaging & Mailing Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-10",
+                "name": "Printing & Binding Consumables",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-11",
+                "name": "Office Organization & Storage Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-12",
+                "name": "Presentation & Teaching Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-13",
+                "name": "Calendar, Planner & Time-Management Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-14",
+                "name": "Business Forms & Administrative Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-15",
+                "name": "School Bags & Student Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-021-16",
+                "name": "Other Office, School & Stationery Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-022",
+        "name": "Religious, Spiritual & Cultural Items",
+        "subs": [
+            {
+                "id": "CAT-022-01",
+                "name": "Religious Statues & Idols",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-02",
+                "name": "Puja & Worship Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-03",
+                "name": "Prayer & Meditation Items",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-04",
+                "name": "Religious Clothing & Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-05",
+                "name": "Prayer Mats, Carpets & Floor Items",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-06",
+                "name": "Rosaries, Mala & Prayer Beads",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-07",
+                "name": "Incense, Lamps & Ritual Burning Items",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-08",
+                "name": "Religious Vessels & Ritual Utensils",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-09",
+                "name": "Temple, Shrine & Home Altar Items",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-10",
+                "name": "Religious Flags, Banners & Symbols",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-11",
+                "name": "Festival & Cultural Celebration Items",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-12",
+                "name": "Traditional & Cultural Handicrafts",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-13",
+                "name": "Spiritual & Meditation Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-14",
+                "name": "Cultural Musical Instruments",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-15",
+                "name": "Religious Gift & Devotional Items",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-022-16",
+                "name": "Other Religious, Spiritual & Cultural Items",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-023",
+        "name": "Health, Medical & Wellness Equipment",
+        "subs": [
+            {
+                "id": "CAT-023-01",
+                "name": "Blood Pressure & Vital Signs Monitors",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-02",
+                "name": "Thermometers & Temperature Monitoring",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-03",
+                "name": "Blood Glucose & Diabetes Monitoring",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-04",
+                "name": "Pulse Oximeters & Respiratory Monitoring",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-05",
+                "name": "Diagnostic & Examination Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-06",
+                "name": "Mobility Aids & Walking Support",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-07",
+                "name": "Wheelchairs & Mobility Vehicles",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-08",
+                "name": "Patient Beds & Home Care Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-09",
+                "name": "Physiotherapy & Rehabilitation Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-10",
+                "name": "Respiratory & Oxygen Support Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-11",
+                "name": "Orthopedic & Support Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-12",
+                "name": "Home Health & Recovery Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-13",
+                "name": "First Aid & Emergency Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-14",
+                "name": "Medical Storage & Care Supplies",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-15",
+                "name": "Wellness & Recovery Devices",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-023-16",
+                "name": "Other Health, Medical & Wellness Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-024",
+        "name": "Security, Safety & Emergency Products",
+        "subs": [
+            {
+                "id": "CAT-024-01",
+                "name": "Locks, Padlocks & Access Control",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-02",
+                "name": "Safes, Lockboxes & Secure Storage",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-03",
+                "name": "Home Security Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-04",
+                "name": "Personal Safety & Protection",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-05",
+                "name": "Fire Extinguishers & Fire Safety",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-06",
+                "name": "Smoke, Gas & Safety Alarms",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-07",
+                "name": "Emergency & Disaster Preparedness",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-08",
+                "name": "First Response & Rescue Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-09",
+                "name": "Reflective, Visibility & Warning Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-10",
+                "name": "Workplace Safety Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-11",
+                "name": "Electrical Safety Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-12",
+                "name": "Child Safety & Home Safety",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-13",
+                "name": "Travel & Personal Security",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-14",
+                "name": "Security Signs, Barriers & Access Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-15",
+                "name": "Safety Lighting & Emergency Lighting",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-024-16",
+                "name": "Other Security, Safety & Emergency Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    },
+    {
+        "cat": "CAT-025",
+        "name": "Baby, Maternity & Parenting Products",
+        "subs": [
+            {
+                "id": "CAT-025-01",
+                "name": "Maternity Clothing & Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-02",
+                "name": "Pregnancy Support & Comfort Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-03",
+                "name": "Maternity & Hospital Bags",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-04",
+                "name": "Breastfeeding & Nursing Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-05",
+                "name": "Breast Pumps & Milk Storage",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-06",
+                "name": "Maternity & Nursing Furniture",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-07",
+                "name": "Pregnancy & Parenting Books / Materials",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-08",
+                "name": "Postpartum Care Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-09",
+                "name": "Parenting & Childcare Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-10",
+                "name": "Prenatal & Postpartum Support Equipment",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-11",
+                "name": "Pregnancy Testing & Monitoring Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-12",
+                "name": "Maternity Recovery & Comfort Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-13",
+                "name": "Nursing Covers & Breastfeeding Accessories",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-14",
+                "name": "Parenting Organization & Care Kits",
+                "scope": "Primary catalogue scope for this subcategory."
+            },
+            {
+                "id": "CAT-025-15",
+                "name": "Other Maternity & Parenting Products",
+                "scope": "Primary catalogue scope for this subcategory."
+            }
+        ]
+    }
+];
+            foreach ($categories as $root) {
+                $rootSlug = strtolower($root['cat']);
+                $rootRow = DB::table('categories')->where('slug',$rootSlug)->first();
+                if ($rootRow) {
+                    $rootId=$rootRow->id;
+                    DB::table('categories')->where('id',$rootId)->update(['name'=>$root['name'],'status'=>'active','sort_order'=>(int)substr($root['cat'],-3),'updated_at'=>now()]);
+                } else {
+                    $rootId=DB::table('categories')->insertGetId(['public_id'=>Str::ulid()->toBase32(),'parent_id'=>null,'name'=>$root['name'],'slug'=>$rootSlug,'description'=>null,'status'=>'active','sort_order'=>(int)substr($root['cat'],-3),'created_at'=>now(),'updated_at'=>now()]);
+                }
+                foreach($root['subs'] as $sub){
+                    $slug=strtolower($sub['id']);
+                    $payload=['parent_id'=>$rootId,'name'=>$sub['name'],'slug'=>$slug,'description'=>$sub['scope'],'status'=>'active','sort_order'=>(int)substr($sub['id'],-2),'updated_at'=>now()];
+                    $row=DB::table('categories')->where('slug',$slug)->first();
+                    if($row) DB::table('categories')->where('id',$row->id)->update($payload);
+                    else DB::table('categories')->insert(array_merge($payload,['public_id'=>Str::ulid()->toBase32(),'created_at'=>now()]));
+                }
+            }
+        });
+    }
+}

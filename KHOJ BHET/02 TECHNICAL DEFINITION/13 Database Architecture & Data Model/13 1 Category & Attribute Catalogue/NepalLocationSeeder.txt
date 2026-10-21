@@ -1,0 +1,144 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+
+class NepalLocationSeeder extends Seeder
+{
+    public function run(): void
+    {
+        $path = database_path('seeders/data/nepal-administrative-locations.json');
+        if (!is_file($path)) {
+            throw new \RuntimeException("Missing {$path}");
+        }
+
+        $tree = json_decode(file_get_contents($path), true, 512, JSON_THROW_ON_ERROR);
+
+        DB::transaction(function () use ($tree) {
+            $countryId = DB::table('countries')->where('code', 'NP')->value('id');
+
+            if (!$countryId) {
+                $countryId = DB::table('countries')->insertGetId([
+                    'code' => 'NP',
+                    'name' => 'Nepal',
+                    'status' => 'active',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ]);
+            }
+
+            $provinceNo = 0;
+            foreach ($tree as $provinceName => $districts) {
+                ++$provinceNo;
+                $provinceCode = sprintf('P%02d', $provinceNo);
+
+                $provinceId = DB::table('provinces')
+                    ->where('country_id', $countryId)
+                    ->where('code', $provinceCode)
+                    ->value('id');
+
+                if (!$provinceId) {
+                    $provinceId = DB::table('provinces')->insertGetId([
+                        'country_id' => $countryId,
+                        'code' => $provinceCode,
+                        'name' => $provinceName,
+                        'status' => 'active',
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                    ]);
+                } else {
+                    DB::table('provinces')->where('id', $provinceId)->update([
+                        'name' => $provinceName,
+                        'status' => 'active',
+                        'updated_at' => now(),
+                    ]);
+                }
+
+                $districtNo = 0;
+                foreach ($districts as $districtName => $municipalities) {
+                    ++$districtNo;
+                    $districtCode = sprintf('D%02d%02d', $provinceNo, $districtNo);
+
+                    $districtId = DB::table('districts')
+                        ->where('province_id', $provinceId)
+                        ->where('code', $districtCode)
+                        ->value('id');
+
+                    if (!$districtId) {
+                        $districtId = DB::table('districts')->insertGetId([
+                            'province_id' => $provinceId,
+                            'code' => $districtCode,
+                            'name' => $districtName,
+                            'status' => 'active',
+                            'created_at' => now(),
+                            'updated_at' => now(),
+                        ]);
+                    } else {
+                        DB::table('districts')->where('id', $districtId)->update([
+                            'name' => $districtName,
+                            'status' => 'active',
+                            'updated_at' => now(),
+                        ]);
+                    }
+
+                    $municipalityNo = 0;
+                    foreach ($municipalities as $municipalityName => $wardNumbers) {
+                        ++$municipalityNo;
+                        $municipalityCode = sprintf('M%02d%02d%02d', $provinceNo, $districtNo, $municipalityNo);
+
+                        $type = str_ends_with($municipalityName, 'महानगरपालिका')
+                            ? 'metropolitan'
+                            : (str_ends_with($municipalityName, 'उपमहानगरपालिका')
+                                ? 'sub_metropolitan'
+                                : (str_ends_with($municipalityName, 'नगरपालिका')
+                                    ? 'municipality'
+                                    : 'rural_municipality'));
+
+                        $municipalityId = DB::table('municipalities')
+                            ->where('district_id', $districtId)
+                            ->where('code', $municipalityCode)
+                            ->value('id');
+
+                        if (!$municipalityId) {
+                            $municipalityId = DB::table('municipalities')->insertGetId([
+                                'district_id' => $districtId,
+                                'code' => $municipalityCode,
+                                'name' => $municipalityName,
+                                'municipality_type' => $type,
+                                'status' => 'active',
+                                'created_at' => now(),
+                                'updated_at' => now(),
+                            ]);
+                        } else {
+                            DB::table('municipalities')->where('id', $municipalityId)->update([
+                                'name' => $municipalityName,
+                                'municipality_type' => $type,
+                                'status' => 'active',
+                                'updated_at' => now(),
+                            ]);
+                        }
+
+                        foreach ($wardNumbers as $wardNumber) {
+                            $wardNumber = (int) $wardNumber;
+
+                            DB::table('wards')->updateOrInsert(
+                                [
+                                    'municipality_id' => $municipalityId,
+                                    'ward_number' => $wardNumber,
+                                ],
+                                [
+                                    'name' => null,
+                                    'status' => 'active',
+                                    'updated_at' => now(),
+                                ]
+                            );
+                        }
+                    }
+                }
+            }
+        });
+    }
+}
